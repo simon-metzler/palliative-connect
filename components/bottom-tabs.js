@@ -1,3 +1,4 @@
+import  { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from '../tabs/home';
@@ -46,6 +47,7 @@ const BottomTabs = () => {
         }}
       />
       <Tab.Screen
+        
         name="Groups"
         component={Groups}
         options={{
@@ -58,5 +60,12 @@ const BottomTabs = () => {
     </Tab.Navigator>
   );
 }
+
+
+const styles = StyleSheet.create({
+  tabBar: {
+    marginBottom: 10, // move the tab bar up by 10px
+  },
+});
 
 export default BottomTabs;
