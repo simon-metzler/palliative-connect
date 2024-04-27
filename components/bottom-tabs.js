@@ -14,10 +14,11 @@ const BottomTabs = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: '#52b1ff',
+        tabBarStyle: styles.tabBar,
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="Infos"
         component={Home}
         options={{
           tabBarLabel: 'Home',
@@ -53,7 +54,7 @@ const BottomTabs = () => {
         options={{
           tabBarLabel: 'Groups',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account-group" color={color} size={size} />
+            <MaterialCommunityIcons name="account-group" color={color} size={size}/>
           ),
         }}
       />
@@ -64,7 +65,9 @@ const BottomTabs = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    marginBottom: 10, // move the tab bar up by 10px
+    height: 70, // move the tab bar up by 10px
+    paddingBottom: 20,
+    
   },
 });
 

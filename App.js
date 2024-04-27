@@ -1,14 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
 import BottomTabs from './components/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import Header from './components/header';
 
 const App = () => {
   return (
     <View style={styles.container}>
+      <Header />
+
       <NavigationContainer>
-        <BottomTabs  />
+        <BottomTabs/>
       </NavigationContainer>
-      
+
     </View>
   );
 }
