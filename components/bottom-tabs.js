@@ -1,9 +1,10 @@
 import  { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Home from '../tabs/home';
-import Communities from '../tabs/communities';
-import QuestionPortal from '../tabs/question-portal';
+import Communities from '../screens/communities';
+import QuestionPortal from '../screens/question-portal';
+import HomeStack from '../routes/homeStack';
+import { createAppContainer } from 'react-navigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,11 +15,12 @@ const BottomTabs = () => {
       screenOptions={{
         tabBarActiveTintColor: '#52b1ff',
         tabBarStyle: styles.tabBar,
+        headerShown: false,
       }}
     >
       <Tab.Screen
         name="Infos"
-        component={Home}
+        component={HomeStack}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (

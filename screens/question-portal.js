@@ -1,9 +1,9 @@
 import { View, StyleSheet, FlatList } from "react-native";
-import Post from "../components/post";
+import QuestionPreview from "../components/questionPreview";
 import { useState } from "react";
 
 const QuestionPortal = () => {
-    const [posts, setPosts] = useState([
+    const [questions, setQuestions] = useState([
         { title: 'Was bietet das Palliativteam für Patienten an?', text: 'Unser Palliativteam bietet umfassende Unterstützung für Patienten mit schweren Krankheiten.', author: 'Dr. Anna Müller', key: '1' },
         { title: 'Welche Art von Pflege wird im Hospiz angeboten?', text: 'Wir bieten spezialisierte Pflege und Unterstützung für Patienten in ihrer letzten Lebensphase, um ihnen Komfort und Würde zu ermöglichen.', author: 'Dr. Max Schmidt', key: '2' },
         { title: 'Wie wird das Schmerzmanagement gehandhabt?', text: 'Unser Team aus Palliativmedizinern und Pflegekräften arbeitet eng zusammen, um Schmerzen effektiv zu lindern und die Lebensqualität unserer Patienten zu verbessern.', author: 'Dr. Julia Wagner', key: '3' },
@@ -15,9 +15,9 @@ const QuestionPortal = () => {
     return (
         <View style={styles.container}>
             <FlatList 
-              data = {posts}
+              data = {questions}
               renderItem={({item}) => (
-                <Post sytle={styles.post} item={item}/>
+                <QuestionPreview sytle={styles.post} item={item}/>
               )}
             
             />

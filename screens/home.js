@@ -1,10 +1,10 @@
 import { View, StyleSheet, FlatList } from "react-native";
 import { useState } from "react";
-import Post from "../components/post";
+import InformationPreview from "../components/informationPreview";
 
-const Home = () => {
+const Home = ( {navigation }) => {
 
-    const [posts, setPosts] = useState([
+    const [information, setInformation] = useState([
         { title: 'Unterstützung für Patienten', text: 'Unser Palliativteam bietet umfassende Unterstützung für Patienten mit schweren Krankheiten.', author: 'Dr. Anna Müller', key: '1' },
         { title: 'Hospizpflege', text: 'Wir bieten spezialisierte Pflege und Unterstützung für Patienten in ihrer letzten Lebensphase, um ihnen Komfort und Würde zu ermöglichen.', author: 'Dr. Max Schmidt', key: '2' },
         { title: 'Schmerzmanagement', text: 'Unser Team aus Palliativmedizinern und Pflegekräften arbeitet eng zusammen, um Schmerzen effektiv zu lindern und die Lebensqualität unserer Patienten zu verbessern.', author: 'Dr. Julia Wagner', key: '3' },
@@ -19,9 +19,9 @@ const Home = () => {
     return (
         <View style={styles.container}>
             <FlatList 
-              data = {posts}
+              data = {information}
               renderItem={({item}) => (
-                <Post item={item}/>
+                <InformationPreview item={item} navigation={navigation}/>
               )}
             
             />

@@ -1,9 +1,9 @@
 import { View, StyleSheet, FlatList } from "react-native";
-import Blog from "../components/blog";
+import PostPreview from "../components/postPreview";
 import { useState } from "react";
 
 const Communities = () => {
-    const [blogs, setBlogs] = useState([
+    const [posts, setPosts] = useState([
         { title: 'Meine Reise mit Palliativversorgung', text: 'In meinem neuen Blogbeitrag möchte ich über die umfassende Unterstützung sprechen, die ich von unserem Palliativteam erhalte, während ich mit meiner schweren Krankheit umgehe.', author: 'Patientin Lisa', key: '1' },
         { title: 'Einblick in meine Hospizpflege-Erfahrung', text: 'Ich möchte in diesem Blogbeitrag einige Einblicke in die spezialisierte Pflege und Unterstützung teilen, die ich während meiner letzten Lebensphase erhalte, um mir Komfort und Würde zu ermöglichen.', author: 'Patient Peter', key: '2' },
         { title: 'Ein Tag im Leben mit Schmerzmanagement', text: 'In meinem Blogbeitrag möchte ich darüber sprechen, wie unser Palliativteam eng zusammenarbeitet, um meine Schmerzen effektiv zu lindern und meine Lebensqualität zu verbessern.', author: 'Patientin Sarah', key: '3' },
@@ -17,9 +17,9 @@ const Communities = () => {
     return (
         <View style={styles.container}>
             <FlatList 
-              data = {blogs}
+              data = {posts}
               renderItem={({item}) => (
-                <Blog item={item}/>
+                <PostPreview item={item}/>
               )}
             
             />

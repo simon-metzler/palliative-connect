@@ -1,12 +1,14 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-const Blog = ( { item } ) => {
+const InformationPreview = ( { item, navigation } ) => {
     return (
+        <TouchableOpacity onPress={() => navigation.navigate("Information", { item: item })}>
         <View style={styles.post}>
             <Text style={styles.title}>{ item.title }</Text>
             <Text style={styles.author}>{ item.author }</Text>
             <Text>{ item.text }</Text>
         </View>
+        </TouchableOpacity>
     );
 }
 
@@ -31,4 +33,4 @@ const styles = StyleSheet.create({
     },
 })
  
-export default Blog;
+export default InformationPreview;
