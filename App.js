@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import BottomTabs from './components/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Header from './components/header';

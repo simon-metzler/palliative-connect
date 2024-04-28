@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import { useState } from "react";
 import Post from "../components/post";
 
@@ -21,7 +21,7 @@ const Home = () => {
             <FlatList 
               data = {posts}
               renderItem={({item}) => (
-                <Post item={item}/>
+                <Post sytle={styles.post} item={item}/>
               )}
             
             />
@@ -33,9 +33,11 @@ const Home = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: "#eee",
     },
-})
+}
+
+)
 
 
  

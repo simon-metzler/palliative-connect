@@ -65,8 +65,9 @@ const BottomTabs = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    height: 70, // move the tab bar up by 10px
-    paddingBottom: 20,
+    height: 60,
+    paddingBottom: 10,
+    paddingTop: 10,
     
   },
 });

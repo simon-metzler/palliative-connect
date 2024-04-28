@@ -11,7 +11,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 50,
+        paddingTop: 60,
         backgroundColor: '#52b1ff',
         padding: 16,
         borderBottomWidth: 1,
@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        textAlign: 'center',
     },
 });
 

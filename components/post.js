@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     post: {
         padding: 16,
         margin: 10,
-        marginHorizontal: 50,
         borderColor: "#bbb",
         borderWidth: 1,
         borderRadius: 10,
         flexDirection: "column",
+        backgroundColor: "#fff",
     },
     title: {
         fontSize: 18,
