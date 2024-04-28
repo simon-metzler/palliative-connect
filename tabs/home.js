@@ -21,7 +21,7 @@ const Home = () => {
             <FlatList 
               data = {posts}
               renderItem={({item}) => (
-                <Post sytle={styles.post} item={item}/>
+                <Post item={item}/>
               )}
             
             />

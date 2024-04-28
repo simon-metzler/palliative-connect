@@ -2,8 +2,7 @@ import  { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from '../tabs/home';
-import Groups from '../tabs/groups';
-import Chat from '../tabs/chat';
+import Communities from '../tabs/communities';
 import QuestionPortal from '../tabs/question-portal';
 
 const Tab = createBottomTabNavigator();
@@ -28,16 +27,6 @@ const BottomTabs = () => {
         }}
       />
       <Tab.Screen
-        name="Chat"
-        component={Chat}
-        options={{
-          tabBarLabel: 'Chat',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="chat" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Questions"
         component={QuestionPortal}
         options={{
@@ -49,10 +38,10 @@ const BottomTabs = () => {
       />
       <Tab.Screen
         
-        name="Groups"
-        component={Groups}
+        name="Communities"
+        component={Communities}
         options={{
-          tabBarLabel: 'Groups',
+          tabBarLabel: 'Communities',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account-group" color={color} size={size}/>
           ),
