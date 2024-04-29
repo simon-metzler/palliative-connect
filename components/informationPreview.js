@@ -1,12 +1,21 @@
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 const InformationPreview = ( { item, navigation } ) => {
+
+    const cropText = (text) => {
+        if (text.length > 50) {
+            return text.substring(0, 100) + "...";
+        }
+        return text;
+    }
+
+
     return (
         <TouchableOpacity onPress={() => navigation.navigate("Information", { item: item })}>
         <View style={styles.post}>
             <Text style={styles.title}>{ item.title }</Text>
             <Text style={styles.author}>{ item.author }</Text>
-            <Text>{ item.text }</Text>
+            <Text>{ cropText(item.text) }</Text>
         </View>
         </TouchableOpacity>
     );

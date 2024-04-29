@@ -4,7 +4,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Communities from '../screens/communities';
 import QuestionPortal from '../screens/question-portal';
 import HomeStack from '../routes/homeStack';
-import { createAppContainer } from 'react-navigation';
 
 const Tab = createBottomTabNavigator();
 

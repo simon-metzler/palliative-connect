@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a85e5737-4bdd-4487-8d2e-d39557b71366"
+      }
+    },
+    "owner": "shymoon"
   }
 }
