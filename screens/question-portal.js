@@ -31,7 +31,7 @@ const QuestionPortal = () => {
             <FlatList 
               data = {questions}
               renderItem={({item}) => (
-                <QuestionPreview sytle={styles.post} item={item} />
+                <QuestionPreview sytle={styles.post} item={item}/>
               )}
             
             />
