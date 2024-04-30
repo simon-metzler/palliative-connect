@@ -1,9 +1,9 @@
 import  { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Communities from '../screens/communities';
 import QuestionPortal from '../screens/question-portal';
 import HomeStack from '../routes/homeStack';
+import CommunitiesStack from '../routes/communitiesStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +40,7 @@ const BottomTabs = () => {
       <Tab.Screen
         
         name="Communities"
-        component={Communities}
+        component={CommunitiesStack}
         options={{
           tabBarLabel: 'Communities',
           tabBarIcon: ({ color, size }) => (

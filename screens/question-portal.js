@@ -35,9 +35,7 @@ const QuestionPortal = () => {
               )}
             
             />
-
             <TextInput style={styles.input} placeholder="Stelle eine Frage..." value={questionInput} onChangeText={setQuestionsInput} onSubmitEditing={() => addQuestion(questionInput)} />
-
         </View>
     );
 }

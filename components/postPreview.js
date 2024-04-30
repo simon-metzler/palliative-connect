@@ -1,12 +1,14 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-const PostPreview = ( { item } ) => {
+const PostPreview = ( { item, navigation } ) => {
     return (
-        <View style={styles.post}>
-            <Text style={styles.title}>{ item.title }</Text>
-            <Text style={styles.author}>{ item.author }</Text>
-            <Text>{ item.text }</Text>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate("Post", { item: item })}>
+            <View style={styles.post}>
+                <Text style={styles.title}>{ item.title }</Text>
+                <Text style={styles.author}>{ item.author }</Text>
+                <Text>{ item.text }</Text>
+            </View>
+        </TouchableOpacity>
     );
 }
 
