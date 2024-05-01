@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         padding: 16,
         margin: 10,
         backgroundColor: "#fff",
+        borderRadius: 10,
     },
     title: {
         fontSize: 18, 

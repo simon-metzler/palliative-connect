@@ -1,29 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-
-const Header = () => {
+const Comment = ({ author, content }) => {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Palliative Connect</Text>
+            <Text style={styles.author}>{author}</Text>
+            <Text>{content}</Text>
         </View>
     );
 };
 
+
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 60,
-        backgroundColor: '#52b1ff',
         padding: 16,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
-
-        
+        margin: 10,
+        backgroundColor: "#fff",
+        borderRadius: 10,
     },
-    title: {
-        fontSize: 20,
+    author: {
         fontWeight: 'bold',
     },
 });
 
-export default Header;
+export default Comment;

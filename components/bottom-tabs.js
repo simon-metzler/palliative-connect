@@ -39,7 +39,7 @@ const BottomTabs = () => {
       />
       <Tab.Screen
         
-        name="Communities"
+        name="CommunitiesStack"
         component={CommunitiesStack}
         options={{
           tabBarLabel: 'Communities',

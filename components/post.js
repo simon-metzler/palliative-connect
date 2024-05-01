@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import CommentSection from './comment-section';
 
 const Post = ({ route }) => {
 
@@ -7,19 +8,27 @@ const Post = ({ route }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{ item.title }</Text>
-            <Text style={styles.author}>Von { item.author }</Text>
-            <Text style={styles.text}>{ item.text }</Text>
+            <View style={styles.post}>
+                <Text style={styles.title}>{ item.title }</Text>
+                <Text style={styles.author}>Von { item.author }</Text>
+                <Text style={styles.text}>{ item.text }</Text>
+            </View>
+            <CommentSection />
         </View>
+
+        
+        
+
     );
 };
 
 
 const styles = StyleSheet.create({
-    container: {
+    post: {
         padding: 16,
         margin: 10,
         backgroundColor: "#fff",
+        borderRadius: 10,
     },
     title: {
         fontSize: 18, 
